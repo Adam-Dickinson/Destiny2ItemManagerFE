@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
-import { AuthComponent } from './auth/auth.component';
+import { AuthComponent } from './landingPage/auth.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
