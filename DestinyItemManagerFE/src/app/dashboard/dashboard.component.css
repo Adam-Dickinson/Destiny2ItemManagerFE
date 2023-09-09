@@ -1,0 +1,15 @@
+mat-card {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-right: 0.5rem;
+}
