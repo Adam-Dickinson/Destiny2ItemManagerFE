@@ -1,7 +1,77 @@
+.dashboard-page {
+  height: 100vh;
+  background-image: url("https://www.blueberries.gg/wp-content/uploads/2023/04/Lighfall-Wallpaper-Destiny-2-2048x1152.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;   /* Stack children vertically */
+  align-items: flex-start;  /* Align children to the start (top for column direction) */
+  justify-content: center;  /* Center children vertically */
+  font-family: 'Arial', sans-serif;
+  align-items: center;
+}
+
+
+.content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: auto;
+}
+
+.content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  color: #ffb703;
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3 {
+  color: #ffb703;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+p, .profile-details {
+  color: #dddddd;
+  font-size: 1.25em;
+  margin-bottom: 25px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #ffb703;
+  color: #222222;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 183, 3, 0.4);
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9800;
+}
+
 mat-card {
   margin: 2rem auto;
   max-width: 600px;
-  padding: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 mat-card-content {
@@ -10,6 +80,95 @@ mat-card-content {
   align-items: center;
 }
 
-button {
-  margin-right: 0.5rem;
+.profile-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  border: 2px solid #ffb703;
+}
+
+.memberships-section {
+  margin-top: 30px;
+}
+
+.membership-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  min-height: 70px;  /* Set a minimum height */
+  position: absolute;  /* Setting the position of the navbar to be absolute */
+  right: 20px;         /* This will position the navbar 20px from the right edge of its container */
+  top: 20px;
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffb703;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.profile-btn:hover .navbar-profile-image {
+  transform: scale(1.1);
+}
+
+.profile-details-dropdown {
+  position: absolute;
+  top: 70px; 
+  right: 0; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  z-index: 1;
 }

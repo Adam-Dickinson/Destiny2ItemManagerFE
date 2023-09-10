@@ -1,15 +1,19 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Welcome to Your Dashboard</mat-card-title>
-    <mat-card-subtitle>Some basic details and information</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      This is a basic dashboard. You can add any content or widgets you need
-      here.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Some Action</button>
-  </mat-card-actions>
-</mat-card>
+<div class="dashboard-page">
+  <!-- Top Navbar - It will only be shown when isNavbarVisible is true -->
+  <div *ngIf="isNavbarVisible" class="top-navbar">
+    <button class="profile-btn" *ngIf="userData && userData.Response" (click)="toggleProfileDetails()">
+      <img class="navbar-profile-image" [src]="'https://www.bungie.net' + userData.Response.bungieNetUser.profilePicturePath" alt="Profile Picture">
+    </button>
+    <div *ngIf="showProfileDetails" class="profile-details-dropdown">
+      <!-- Sample profile details, add more as per requirements -->
+      <div>{{ userData.Response.bungieNetUser.uniqueName }}</div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>Destiny Dashboard</h1>
+    <p>Welcome, Guardian. Select your character to continue.</p>
+    <button mat-raised-button color="accent" (click)="getCharacters()">Load Characters</button>
+  </div>
+</div>
